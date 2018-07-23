@@ -99,13 +99,16 @@ Sentinel also has a simple dashboad, which can monitor the cliets, and configure
 2. Run command to package this module:
 
 ```bash
-$ mvn clean package -Dmaven.test.skip
+$ mvn clean package
 ```
 
 3. Start dashboard
 
 ```bash
-java -Dserver.port=8080 -Dcsp.console.server=localhost:8080 -jar target/sentinel-dashboard.jar
+$ java -Dserver.port=8080 \
+-Dcsp.sentinel.dashboard.server=localhost:8080 \
+-Dproject.name=sentinel-dashboard \
+-jar target/sentinel-dashboard.jar
 ```
 
 4. Include sentinel client in your application by mvn or download this library:
@@ -144,7 +147,8 @@ Then execute:
 ```bash
 mvn -f download-sentinel-pom.xml dependency:copy-dependencies
 ```
-5. Add JVM parameter `-Dcsp.console.server=consoleIp:port` when you start your application
+5. Add JVM parameter `-Dcsp.sentinel.dashboard.server=consoleIp:port` when you start your application
+
 6. Trigger your resource
 
 After above steps, you can check your application in "Machnes" and resources runtime infomation in your dashboard.
