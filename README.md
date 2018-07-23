@@ -10,7 +10,7 @@ See the [Javadoc](https://github.com/alibaba/Sentinel/tree/master/doc) for the A
 
 See [中文Readme](https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D) for readme
 
-## What does it do?
+## What Does It Do?
 
 With the popularity of distributed systems, the stability between services is becoming more important than ever before. Sentinel takes "flow" as breakthrough point, and works on multiple fields including flow control, concurrency, circuit breaking, load protection, to protect service stability
 
@@ -19,7 +19,7 @@ Sentinel has following features:
 - Integrated monitor, operation module,
 - Easy extension point
 
-## Download libaray via Maven
+## Download Libaray
 
 Example for Maven:
 
@@ -63,12 +63,12 @@ How it works can be found in [How it works](https://github.com/alibaba/Sentinel/
 
 Samples can be found in the [demo](https://github.com/alibaba/Sentinel/tree/master/sentinel-demo) module.
 
-## Define rules
+## Define Rules
 
 ## Result
 
 
-## Run Dashboard
+## Start Dashboard
 
 1. Download [Sentinel-Dashboard](https://github.com/alibaba/Sentinel/tree/master/sentinel-dashboard) module
 2. Run command to package this module:
@@ -126,7 +126,7 @@ After above steps, you can check your application in "Machnes" and resources run
 
 More details please refer to: [Dashboard](https://github.com/alibaba/Sentinel/wiki/%E6%8E%A7%E5%88%B6%E5%8F%B0)
 
-## Trouble shooting and logs
+## Trouble Shooting and Logs
 
 Sentinel will generate logs for trouble shooting. All the infos can be found in  [logs](https://github.com/alibaba/Sentinel/wiki/Logs)
 
