@@ -72,17 +72,17 @@ After above steps, you can use sentinel now. By default, we will provide adapter
 
 ## Result
 
-And you can see following records in [user dir]\csp\logs\metrics.log.xXXX
-```xml
-|--timestamp-|------date time----|--resource-|p |s |block|e|rt
-1529998904000|2018-06-26 15:41:44|hello world|20|20|0    |0|0
-1529998905000|2018-06-26 15:41:45|hello world|20|20|5579 |0|728
-1529998906000|2018-06-26 15:41:46|hello world|20|20|15698|0|0
-1529998907000|2018-06-26 15:41:47|hello world|20|20|19262|0|0
-1529998908000|2018-06-26 15:41:48|hello world|20|20|19502|0|0
-1529998909000|2018-06-26 15:41:49|hello world|20|20|18386|0|0
+And you can see following records in `[user dir]\csp\logs\${appName}-metrics.log.xxx`
+```
+|--timestamp-|------date time----|--resource-|p |block|s |e|rt
+1529998904000|2018-06-26 15:41:44|hello world|20|0    |20|0|0
+1529998905000|2018-06-26 15:41:45|hello world|20|5579 |20|0|728
+1529998906000|2018-06-26 15:41:46|hello world|20|15698|20|0|0
+1529998907000|2018-06-26 15:41:47|hello world|20|19262|20|0|0
+1529998908000|2018-06-26 15:41:48|hello world|20|19502|20|0|0
+1529998909000|2018-06-26 15:41:49|hello world|20|18386|20|0|0
 
-p for incoming reqeust, success for success handled, block for intercepted by rules, e for exception, rt for average response time
+p for incoming reqeust, block for intercepted by rules, success for success handled, e for exception, rt for average response time(ms)
 
 ```
 
