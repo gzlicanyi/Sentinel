@@ -166,3 +166,7 @@ Sentinel will generate logs for trouble shooting. All the infos can be found in 
 For bugs, questions and discussions please use the [GitHub Issues](https://github.com/alibaba/sentinel/issues)
 
 Contact us: sentinel@linux.alibaba.com
+
+Twitter:@AlibabaSentinel
+
+Weibo:
