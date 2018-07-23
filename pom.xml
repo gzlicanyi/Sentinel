@@ -5,12 +5,12 @@
 
     <groupId>com.alibaba.csp</groupId>
     <artifactId>sentinel-parent</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>pom</packaging>
 
     <properties>
         <!-- project version -->
-        <project.version>0.1-SNAPSHOT</project.version>
+        <project.version>0.1.0</project.version>
 
         <!-- Compile libs -->
         <fastjson.version>1.2.47</fastjson.version>
