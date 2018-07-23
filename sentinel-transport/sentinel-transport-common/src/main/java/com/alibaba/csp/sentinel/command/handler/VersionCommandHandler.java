@@ -14,6 +14,6 @@ public class VersionCommandHandler implements CommandHandler<String> {
 
     @Override
     public CommandResponse<String> handle(CommandRequest request) {
-        return CommandResponse.ofSuccess("0.1-SNAPSHOT");
+        return CommandResponse.ofSuccess("0.1.0");
     }
 }

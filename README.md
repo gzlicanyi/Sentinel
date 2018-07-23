@@ -19,7 +19,7 @@ Sentinel has following features:
 - Integrated monitor, operation module,
 - Easy extension point
 
-## Download Libaray
+## Download Library
 
 Example for Maven:
 
