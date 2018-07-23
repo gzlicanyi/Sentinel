@@ -14,9 +14,7 @@
 
     <modules>
         <module>sentinel-web-servlet</module>
-        <!--<module>sentinel-diamond-adapter</module>-->
         <module>sentinel-dubbo-adapter</module>
-        <module>sentinel-hsf-adapter</module>
         <module>sentinel-grpc-adapter</module>
         <module>sentinel-spring-boot-starter</module>
     </modules>
