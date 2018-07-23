@@ -61,33 +61,6 @@ Example for Maven:
 </dependency>
 ```
 
-If you need to download the jars instead of using a build system, create a Maven pom file like this with the desired version:
-
-```xml
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.alibaba</groupId>
-    <artifactId>download-sentine</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>Simple POM to download sentinel-core and dependencies</name>
-    <dependencies>
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-core</artifactId>
-            <version>x.y.z</version>
-            <scope/>
-        </dependency>
-    </dependencies>
-</project>
-```
-
-Then execute:
-
-```bash
-mvn -f download-sentinel-pom.xml dependency:copy-dependencies
-```
-
 Sentinel requires Java 6 or later.
 
 ## Run Dashboard
@@ -113,6 +86,33 @@ java -Dserver.port=8080 -Dcsp.console.server=localhost:8080 -jar target/sentinel
     <artifactId>sentinel-transport-simple-http</artifactId>
     <version>x.y.z</version>
 </dependency>
+```
+
+If you need to download the jars instead of using a build system, create a Maven pom file like this with the desired version:
+
+```xml
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.alibaba</groupId>
+    <artifactId>download-sentine</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Simple POM to download sentinel-core and dependencies</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+            <version>x.y.z</version>
+            <scope/>
+        </dependency>
+    </dependencies>
+</project>
+```
+
+Then execute:
+
+```bash
+mvn -f download-sentinel-pom.xml dependency:copy-dependencies
 ```
 5. Add JVM parameter `-Dcsp.console.server=consoleIp:port` when you start your application
 6. Trigger your resource
