@@ -14,7 +14,7 @@ See [中文Readme](https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D) 
 
 With the popularity of distributed systems, the stability between services is becoming more important than ever before. Sentinel takes "flow" as breakthrough point, and works on multiple fields including flow control, concurrency, circuit breaking, load protection, to protect service stability
 
-Sentinel has below features:
+Sentinel has following features:
 - Rich applicable scenarios for flow control, concurrency, circuit breaking, load protection
 - Integrated monitor, operation module,
 - Easy extension point
