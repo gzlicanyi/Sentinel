@@ -19,6 +19,19 @@ Sentinel has following features:
 - Integrated monitor, operation module,
 - Easy extension point
 
+## Download libaray via Maven
+
+Example for Maven:
+
+```xml
+<dependency>
+    <groupId>com.alibaba.csp</groupId>
+    <artifactId>sentinel-core</artifactId>
+    <version>x.y.z</version>
+</dependency>
+```
+
+Sentinel requires Java 6 or later.
 
 ## "Hello world"
 
@@ -41,7 +54,8 @@ try {
   }
 }
 ```
-By default, we will provide adapter to do this for popular frameworks. 
+
+After above steps, you can use sentinel now. By default, we will provide adapter to do this for popular frameworks. 
 
 More examples and information can be found in the [How To Use](https://github.com/alibaba/Sentinel/wiki/How-to-Use) section.
 
@@ -49,19 +63,10 @@ How it works can be found in [How it works](https://github.com/alibaba/Sentinel/
 
 Samples can be found in the [demo](https://github.com/alibaba/Sentinel/tree/master/sentinel-demo) module.
 
-## Maven
+## Define rules
 
-Example for Maven:
+## Result
 
-```xml
-<dependency>
-    <groupId>com.alibaba.csp</groupId>
-    <artifactId>sentinel-core</artifactId>
-    <version>x.y.z</version>
-</dependency>
-```
-
-Sentinel requires Java 6 or later.
 
 ## Run Dashboard
 
