@@ -57,18 +57,43 @@ try {
 
 After above steps, you can use sentinel now. By default, we will provide adapter to do this for popular frameworks. 
 
+## Define Rules
+
+```java
+    List<FlowRule> rules = new ArrayList<FlowRule>();
+    FlowRule rule = new FlowRule();
+    rule.setResource("hello world");
+    // set limit qps to 20
+    rule.setCount(20);
+    rules.add(rule);
+    FlowRuleManager.loadRules(rules);
+```
+
+
+## Result
+
+And you can see following records in [user dir]\csp\logs\metrics.log.xXXX
+```xml
+|--timestamp-|------date time----|--resource-|p |s |block|e|rt
+1529998904000|2018-06-26 15:41:44|hello world|20|20|0    |0|0
+1529998905000|2018-06-26 15:41:45|hello world|20|20|5579 |0|728
+1529998906000|2018-06-26 15:41:46|hello world|20|20|15698|0|0
+1529998907000|2018-06-26 15:41:47|hello world|20|20|19262|0|0
+1529998908000|2018-06-26 15:41:48|hello world|20|20|19502|0|0
+1529998909000|2018-06-26 15:41:49|hello world|20|20|18386|0|0
+
+p for incoming reqeust, success for success handled, block for intercepted by rules, e for exception, rt for average response time
+
+```
+
 More examples and information can be found in the [How To Use](https://github.com/alibaba/Sentinel/wiki/How-to-Use) section.
 
 How it works can be found in [How it works](https://github.com/alibaba/Sentinel/wiki/How-it-works)
 
 Samples can be found in the [demo](https://github.com/alibaba/Sentinel/tree/master/sentinel-demo) module.
 
-## Define Rules
-
-## Result
-
-
 ## Start Dashboard
+Sentinel also has a simple dashboad, which can monitor the cliets, and configure the rules.
 
 1. Download [Sentinel-Dashboard](https://github.com/alibaba/Sentinel/tree/master/sentinel-dashboard) module
 2. Run command to package this module:
